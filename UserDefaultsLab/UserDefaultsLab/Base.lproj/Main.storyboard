@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grt-sO-4pi">
+                                <rect key="frame" x="87" y="405" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horoscope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYZ-IR-Mjt">
+                                <rect key="frame" x="136.5" y="88" width="141.5" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-Qm-e4F">
+                                <rect key="frame" x="87" y="149" width="240" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ePL-co-Jeh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PU-ps-C5N">
+                                <rect key="frame" x="172" y="756" width="69" height="30"/>
+                                <state key="normal" title="I'm all set!"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-eo-M3l">
+                                <rect key="frame" x="172" y="475" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-tu-EM5">
+                                <rect key="frame" x="182" y="376" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="a4U-8M-ehH">
+                                <rect key="frame" x="0.0" y="504" width="414" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a4U-8M-ehH" firstAttribute="top" secondItem="K7Y-eo-M3l" secondAttribute="bottom" constant="8" id="2mg-KB-Z8j"/>
+                            <constraint firstItem="a4U-8M-ehH" firstAttribute="top" secondItem="grt-sO-4pi" secondAttribute="bottom" constant="65" id="5RE-4X-PKi"/>
+                            <constraint firstItem="8Bz-tu-EM5" firstAttribute="centerX" secondItem="grt-sO-4pi" secondAttribute="centerX" id="Ddv-UC-C8Q"/>
+                            <constraint firstItem="grt-sO-4pi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="JqS-y3-iwa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3PU-ps-C5N" secondAttribute="trailing" constant="173" id="KHw-y4-vwh"/>
+                            <constraint firstItem="4gW-Qm-e4F" firstAttribute="top" secondItem="WYZ-IR-Mjt" secondAttribute="bottom" constant="25" id="Kkv-m5-8ah"/>
+                            <constraint firstItem="3PU-ps-C5N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="O0d-3P-IfZ"/>
+                            <constraint firstItem="K7Y-eo-M3l" firstAttribute="leading" secondItem="3PU-ps-C5N" secondAttribute="leading" id="PRM-RH-gIV"/>
+                            <constraint firstItem="4gW-Qm-e4F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YWC-IK-hVV"/>
+                            <constraint firstItem="K7Y-eo-M3l" firstAttribute="centerX" secondItem="8Bz-tu-EM5" secondAttribute="centerX" id="aEi-cw-ML1"/>
+                            <constraint firstItem="grt-sO-4pi" firstAttribute="top" secondItem="8Bz-tu-EM5" secondAttribute="bottom" constant="8" id="ak1-jm-NfC"/>
+                            <constraint firstItem="a4U-8M-ehH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="duP-fN-hlp"/>
+                            <constraint firstItem="4gW-Qm-e4F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="hYL-Qm-fwc"/>
+                            <constraint firstItem="WYZ-IR-Mjt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="hYR-lb-VuI"/>
+                            <constraint firstItem="3PU-ps-C5N" firstAttribute="top" secondItem="a4U-8M-ehH" secondAttribute="bottom" constant="36" id="kB7-M9-745"/>
+                            <constraint firstItem="WYZ-IR-Mjt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kWh-Ze-OAE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="grt-sO-4pi" secondAttribute="trailing" constant="87" id="lAf-hw-Wpc"/>
+                            <constraint firstItem="grt-sO-4pi" firstAttribute="top" secondItem="4gW-Qm-e4F" secondAttribute="bottom" constant="56" id="obE-he-VOt"/>
+                            <constraint firstItem="a4U-8M-ehH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rap-yO-Vnc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
 </document>
