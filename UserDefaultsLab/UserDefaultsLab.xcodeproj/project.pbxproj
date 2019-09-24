@@ -79,12 +79,10 @@
 		08B83B47233A701D0099E559 /* UserDefaultsLab */ = {
 			isa = PBXGroup;
 			children = (
-				08B83B48233A701D0099E559 /* AppDelegate.swift */,
-				08B83B4A233A701D0099E559 /* SceneDelegate.swift */,
 				08B83B4C233A701D0099E559 /* ViewController.swift */,
 				08B83B4E233A701D0099E559 /* Main.storyboard */,
 				08B83B51233A701E0099E559 /* Assets.xcassets */,
-				08B83B53233A701E0099E559 /* LaunchScreen.storyboard */,
+				08B83B6A233A70550099E559 /* Supporting Files */,
 				08B83B56233A701E0099E559 /* Info.plist */,
 			);
 			path = UserDefaultsLab;
@@ -97,6 +95,16 @@
 				08B83B61233A701E0099E559 /* Info.plist */,
 			);
 			path = UserDefaultsLabTests;
+			sourceTree = "<group>";
+		};
+		08B83B6A233A70550099E559 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08B83B48233A701D0099E559 /* AppDelegate.swift */,
+				08B83B4A233A701D0099E559 /* SceneDelegate.swift */,
+				08B83B53233A701E0099E559 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
