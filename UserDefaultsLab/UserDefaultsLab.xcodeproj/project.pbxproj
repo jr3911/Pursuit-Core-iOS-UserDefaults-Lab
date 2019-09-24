@@ -14,6 +14,8 @@
 		08B83B52233A701E0099E559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B83B51233A701E0099E559 /* Assets.xcassets */; };
 		08B83B55233A701E0099E559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B83B53233A701E0099E559 /* LaunchScreen.storyboard */; };
 		08B83B60233A701E0099E559 /* UserDefaultsLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B5F233A701E0099E559 /* UserDefaultsLabTests.swift */; };
+		08B83B6C233A70CB0099E559 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B6B233A70CB0099E559 /* NetworkHelper.swift */; };
+		08B83B6E233A710B0099E559 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B6D233A710B0099E559 /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		08B83B5B233A701E0099E559 /* UserDefaultsLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserDefaultsLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B83B5F233A701E0099E559 /* UserDefaultsLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsLabTests.swift; sourceTree = "<group>"; };
 		08B83B61233A701E0099E559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B83B6B233A70CB0099E559 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		08B83B6D233A710B0099E559 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				08B83B51233A701E0099E559 /* Assets.xcassets */,
 				08B83B6A233A70550099E559 /* Supporting Files */,
 				08B83B56233A701E0099E559 /* Info.plist */,
+				08B83B6F233A741D0099E559 /* Network Files */,
 			);
 			path = UserDefaultsLab;
 			sourceTree = "<group>";
@@ -105,6 +110,15 @@
 				08B83B53233A701E0099E559 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08B83B6F233A741D0099E559 /* Network Files */ = {
+			isa = PBXGroup;
+			children = (
+				08B83B6B233A70CB0099E559 /* NetworkHelper.swift */,
+				08B83B6D233A710B0099E559 /* AppError.swift */,
+			);
+			path = "Network Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B83B6C233A70CB0099E559 /* NetworkHelper.swift in Sources */,
 				08B83B4D233A701D0099E559 /* ViewController.swift in Sources */,
+				08B83B6E233A710B0099E559 /* AppError.swift in Sources */,
 				08B83B49233A701D0099E559 /* AppDelegate.swift in Sources */,
 				08B83B4B233A701D0099E559 /* SceneDelegate.swift in Sources */,
 			);
