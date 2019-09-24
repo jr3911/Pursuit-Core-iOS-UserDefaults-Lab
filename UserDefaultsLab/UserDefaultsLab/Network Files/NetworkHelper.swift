@@ -16,7 +16,7 @@ enum HTTPMethod: String {
 class NetworkHelper {
     
     //MARK: - Private Properties and Initializers
-    private init () {}
+    private init() {}
     private let urlSession = URLSession(configuration: .default)
     
     //MARK: - Static Properties
