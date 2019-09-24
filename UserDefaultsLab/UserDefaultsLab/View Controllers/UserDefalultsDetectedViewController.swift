@@ -9,11 +9,19 @@
 import UIKit
 
 class UserDefalultsDetectedViewController: UIViewController {
+    
+    //MARK: IBOutlets
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var userSignLabel: UILabel!
 
+    //MARK: - IBActions
+    @IBAction func revealButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    //MARK: - LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 

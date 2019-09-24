@@ -35,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PU-ps-C5N">
                                 <rect key="frame" x="172" y="756" width="69" height="30"/>
                                 <state key="normal" title="I'm all set!"/>
+                                <connections>
+                                    <action selector="setUserDefaults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLn-w1-lVM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-eo-M3l">
                                 <rect key="frame" x="172" y="475" width="70" height="21"/>
@@ -76,6 +79,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="birthdayDatePicker" destination="a4U-8M-ehH" id="JC9-zd-pqc"/>
+                        <outlet property="introImageView" destination="4gW-Qm-e4F" id="Uri-Gt-RAA"/>
+                        <outlet property="nameTextField" destination="grt-sO-4pi" id="qZ0-q7-9Yj"/>
+                        <outlet property="setUserDefaults" destination="3PU-ps-C5N" id="PTW-Si-2bj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +128,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-zy-N1j">
                                 <rect key="frame" x="184" y="561" width="46" height="30"/>
                                 <state key="normal" title="Reveal"/>
+                                <connections>
+                                    <action selector="revealButtonPressed:" destination="wdT-yG-uAQ" eventType="touchUpInside" id="ihu-x1-eku"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -139,6 +151,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fkW-76-nmW"/>
                     </view>
+                    <connections>
+                        <outlet property="userSignLabel" destination="0m2-ia-cnG" id="0eS-9u-TDT"/>
+                        <outlet property="welcomeLabel" destination="e6r-LX-F6a" id="GVs-VZ-Y0Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfP-iP-aI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,6 +233,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yJg-kv-l6K"/>
                     </view>
+                    <connections>
+                        <outlet property="detailUserLabel" destination="rnJ-11-Ni4" id="S2S-zp-QVA"/>
+                        <outlet property="detailUserSignLabel" destination="xmC-n6-Ieh" id="2UD-O1-Yfc"/>
+                        <outlet property="horoscopeTextView" destination="jVe-Hq-4Ig" id="xOS-fW-ZqF"/>
+                        <outlet property="intensityLabel" destination="U8v-TJ-Oyp" id="rQy-zo-0jR"/>
+                        <outlet property="keywordsLabel" destination="dek-1D-Pzn" id="qVg-tr-OXQ"/>
+                        <outlet property="moodLabel" destination="fPN-ms-Y9N" id="Aim-uC-nRs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-j1-hdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

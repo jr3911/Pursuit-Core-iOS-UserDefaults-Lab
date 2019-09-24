@@ -9,11 +9,21 @@
 import UIKit
 
 class NewUserViewController: UIViewController {
-
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var introImageView: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var birthdayDatePicker: UIDatePicker!
+    
+    //MARK: - IBActions
+    
+    @IBAction func setUserDefaults(_ sender: UIButton) {
+        
+    }
+    
+    //MARK: - LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
