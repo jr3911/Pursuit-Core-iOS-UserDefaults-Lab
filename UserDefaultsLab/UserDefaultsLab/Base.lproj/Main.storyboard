@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New User View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewUserViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--User Defalults Detected View Controller-->
         <scene sceneID="qId-CH-TV1">
             <objects>
-                <viewController id="wdT-yG-uAQ" sceneMemberID="viewController">
+                <viewController id="wdT-yG-uAQ" customClass="UserDefalultsDetectedViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTZ-Qh-BvW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="943.47826086956525" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Horoscope Results View Controller-->
         <scene sceneID="Tfe-kz-cVY">
             <objects>
-                <viewController id="Fhy-Va-vZi" sceneMemberID="viewController">
+                <viewController id="Fhy-Va-vZi" customClass="HoroscopeResultsViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3d5-Tf-QMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

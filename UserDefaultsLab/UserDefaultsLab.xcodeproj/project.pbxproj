@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		08B83B49233A701D0099E559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B48233A701D0099E559 /* AppDelegate.swift */; };
 		08B83B4B233A701D0099E559 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B4A233A701D0099E559 /* SceneDelegate.swift */; };
-		08B83B4D233A701D0099E559 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B4C233A701D0099E559 /* ViewController.swift */; };
 		08B83B50233A701D0099E559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B83B4E233A701D0099E559 /* Main.storyboard */; };
 		08B83B52233A701E0099E559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B83B51233A701E0099E559 /* Assets.xcassets */; };
 		08B83B55233A701E0099E559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B83B53233A701E0099E559 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,9 @@
 		08B83B6E233A710B0099E559 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B6D233A710B0099E559 /* AppError.swift */; };
 		08B83B71233A94FF0099E559 /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B70233A94FF0099E559 /* HoroscopeAPIClient.swift */; };
 		08B83B73233A95A40099E559 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B72233A95A40099E559 /* Horoscope.swift */; };
+		08B83B76233AA9F40099E559 /* UserDefalultsDetectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B75233AA9F40099E559 /* UserDefalultsDetectedViewController.swift */; };
+		08B83B78233AAA240099E559 /* HoroscopeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B77233AAA240099E559 /* HoroscopeResultsViewController.swift */; };
+		08B83B7A233AADC30099E559 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B79233AADC30099E559 /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,6 @@
 		08B83B45233A701D0099E559 /* UserDefaultsLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDefaultsLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B83B48233A701D0099E559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B83B4A233A701D0099E559 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08B83B4C233A701D0099E559 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08B83B4F233A701D0099E559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08B83B51233A701E0099E559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B83B54233A701E0099E559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +47,9 @@
 		08B83B6D233A710B0099E559 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		08B83B70233A94FF0099E559 /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
 		08B83B72233A95A40099E559 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		08B83B75233AA9F40099E559 /* UserDefalultsDetectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefalultsDetectedViewController.swift; sourceTree = "<group>"; };
+		08B83B77233AAA240099E559 /* HoroscopeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResultsViewController.swift; sourceTree = "<group>"; };
+		08B83B79233AADC30099E559 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +91,9 @@
 		08B83B47233A701D0099E559 /* UserDefaultsLab */ = {
 			isa = PBXGroup;
 			children = (
-				08B83B4C233A701D0099E559 /* ViewController.swift */,
-				08B83B74233A95AC0099E559 /* Models */,
 				08B83B4E233A701D0099E559 /* Main.storyboard */,
+				08B83B7B233AADD30099E559 /* View Controllers */,
+				08B83B74233A95AC0099E559 /* Models */,
 				08B83B51233A701E0099E559 /* Assets.xcassets */,
 				08B83B6A233A70550099E559 /* Supporting Files */,
 				08B83B56233A701E0099E559 /* Info.plist */,
@@ -133,6 +137,16 @@
 				08B83B72233A95A40099E559 /* Horoscope.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		08B83B7B233AADD30099E559 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08B83B79233AADC30099E559 /* NewUserViewController.swift */,
+				08B83B75233AA9F40099E559 /* UserDefalultsDetectedViewController.swift */,
+				08B83B77233AAA240099E559 /* HoroscopeResultsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,13 +250,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B83B76233AA9F40099E559 /* UserDefalultsDetectedViewController.swift in Sources */,
 				08B83B6C233A70CB0099E559 /* NetworkHelper.swift in Sources */,
 				08B83B73233A95A40099E559 /* Horoscope.swift in Sources */,
-				08B83B4D233A701D0099E559 /* ViewController.swift in Sources */,
 				08B83B71233A94FF0099E559 /* HoroscopeAPIClient.swift in Sources */,
 				08B83B6E233A710B0099E559 /* AppError.swift in Sources */,
 				08B83B49233A701D0099E559 /* AppDelegate.swift in Sources */,
 				08B83B4B233A701D0099E559 /* SceneDelegate.swift in Sources */,
+				08B83B7A233AADC30099E559 /* NewUserViewController.swift in Sources */,
+				08B83B78233AAA240099E559 /* HoroscopeResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
