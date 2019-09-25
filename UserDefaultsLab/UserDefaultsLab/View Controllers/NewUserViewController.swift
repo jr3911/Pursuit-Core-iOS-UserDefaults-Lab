@@ -31,6 +31,17 @@ class NewUserViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func setUserDefaultsButtonPressed(_ sender: UIButton) {
+        let userDefaultVC = storyboard?.instantiateViewController(withIdentifier: "UserDefalultsDetectedViewController") as! UserDefalultsDetectedViewController
+        userDefaultVC.username = self.username
+        self.navigationController?.pushViewController(userDefaultVC, animated: true)
+        
+    }
+    
+    @IBAction func datePickerWasScrolled(_ sender: UIDatePicker) {
+        let date = sender.date.description(with: .current).components(separatedBy: " ")
+        let month = date[1]
+        let day = date[2].replacingOccurrences(of: ",", with: "")
+        birthday = [month, day]
     }
     
     //MARK: - LifeCycle Methods
@@ -39,17 +50,6 @@ class NewUserViewController: UIViewController {
         nameTextField.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension NewUserViewController: UITextFieldDelegate {
