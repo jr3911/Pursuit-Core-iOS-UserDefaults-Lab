@@ -18,6 +18,12 @@ class NewUserViewController: UIViewController {
         }
     }
     
+    var birthday: [String] = [] {
+        didSet {
+            defaults.set(birthday, forKey: "birthday")
+        }
+    }
+    
     //MARK: - IBOutlets
     @IBOutlet weak var introImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
