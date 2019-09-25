@@ -9,6 +9,8 @@
 import UIKit
 
 class UserDefalultsDetectedViewController: UIViewController {
+    //MARK: - Properties
+    var username: String!
     
     //MARK: IBOutlets
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -22,17 +24,12 @@ class UserDefalultsDetectedViewController: UIViewController {
     //MARK: - LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpDetailWelcomeViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: Custom Functions
+    private func setUpDetailWelcomeViews() {
+        welcomeLabel.text = "Welcome, \(username.description)!"
     }
-    */
 
 }
