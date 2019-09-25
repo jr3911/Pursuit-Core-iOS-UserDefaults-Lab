@@ -102,55 +102,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back, &lt;User&gt;!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-LX-F6a">
-                                <rect key="frame" x="20" y="160" width="374" height="118"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="RiI-ij-GKG"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="160" width="374" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is today's horoscope for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6c-A4-qPe">
-                                <rect key="frame" x="39" y="286" width="337" height="89"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="89" id="7fz-HU-bP2"/>
-                                </constraints>
+                                <rect key="frame" x="39" y="204" width="337" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;User's Sign&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m2-ia-cnG">
-                                <rect key="frame" x="128" y="383" width="159" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="kAE-xl-KEv"/>
-                                </constraints>
+                                <rect key="frame" x="128" y="232.5" width="159" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-zy-N1j">
-                                <rect key="frame" x="184" y="561" width="46" height="30"/>
+                                <rect key="frame" x="184" y="374" width="46" height="217"/>
                                 <state key="normal" title="Reveal"/>
                                 <connections>
-                                    <action selector="revealButtonPressed:" destination="wdT-yG-uAQ" eventType="touchUpInside" id="ihu-x1-eku"/>
+                                    <action selector="revealButtonPressed:" destination="wdT-yG-uAQ" eventType="touchUpInside" id="tlz-4L-OEp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8Xf-zy-N1j" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="184" id="IpN-cL-v7l"/>
-                            <constraint firstItem="8Xf-zy-N1j" firstAttribute="top" secondItem="0m2-ia-cnG" secondAttribute="bottom" constant="121" id="PnX-1N-REb"/>
-                            <constraint firstItem="e6r-LX-F6a" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="20" id="W87-x2-cqa"/>
-                            <constraint firstItem="0m2-ia-cnG" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="128" id="Xhe-mU-udb"/>
-                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="8Xf-zy-N1j" secondAttribute="trailing" constant="184" id="bEZ-d6-ZxP"/>
-                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="0m2-ia-cnG" secondAttribute="trailing" constant="127" id="iN3-Md-MF4"/>
-                            <constraint firstItem="m6c-A4-qPe" firstAttribute="top" secondItem="e6r-LX-F6a" secondAttribute="bottom" constant="8" id="jaU-Bp-Ys6"/>
-                            <constraint firstItem="m6c-A4-qPe" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="39" id="kae-Wg-RWf"/>
-                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="e6r-LX-F6a" secondAttribute="trailing" constant="20" id="mLX-0y-lzt"/>
-                            <constraint firstItem="e6r-LX-F6a" firstAttribute="top" secondItem="fkW-76-nmW" secondAttribute="top" constant="116" id="paq-1C-KHu"/>
-                            <constraint firstItem="0m2-ia-cnG" firstAttribute="top" secondItem="m6c-A4-qPe" secondAttribute="bottom" constant="8" id="wJ2-K4-lzt"/>
-                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="m6c-A4-qPe" secondAttribute="trailing" constant="38" id="wRx-eg-nhb"/>
-                            <constraint firstItem="fkW-76-nmW" firstAttribute="bottom" secondItem="8Xf-zy-N1j" secondAttribute="bottom" constant="271" id="wUF-MT-Nhg"/>
+                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="8Xf-zy-N1j" secondAttribute="trailing" constant="184" id="0q9-Ox-mQd"/>
+                            <constraint firstItem="m6c-A4-qPe" firstAttribute="top" secondItem="e6r-LX-F6a" secondAttribute="bottom" constant="8" id="7z0-eV-FMi"/>
+                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="m6c-A4-qPe" secondAttribute="trailing" constant="38" id="83C-22-K6v"/>
+                            <constraint firstItem="m6c-A4-qPe" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="39" id="8dZ-5C-7VS"/>
+                            <constraint firstItem="8Xf-zy-N1j" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="184" id="9Zn-N2-FG8"/>
+                            <constraint firstItem="fkW-76-nmW" firstAttribute="bottom" secondItem="8Xf-zy-N1j" secondAttribute="bottom" constant="271" id="AZ0-CK-TPx"/>
+                            <constraint firstItem="0m2-ia-cnG" firstAttribute="top" secondItem="m6c-A4-qPe" secondAttribute="bottom" constant="8" id="Aez-X4-ulp"/>
+                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="e6r-LX-F6a" secondAttribute="trailing" constant="20" id="BOs-9G-jyj"/>
+                            <constraint firstItem="e6r-LX-F6a" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="20" id="Eo4-CP-YlX"/>
+                            <constraint firstItem="0m2-ia-cnG" firstAttribute="leading" secondItem="fkW-76-nmW" secondAttribute="leading" constant="128" id="JoW-4e-646"/>
+                            <constraint firstItem="8Xf-zy-N1j" firstAttribute="top" secondItem="0m2-ia-cnG" secondAttribute="bottom" constant="121" id="Pc6-1r-FwG"/>
+                            <constraint firstItem="e6r-LX-F6a" firstAttribute="top" secondItem="fkW-76-nmW" secondAttribute="top" constant="116" id="g69-Jd-FF7"/>
+                            <constraint firstItem="fkW-76-nmW" firstAttribute="trailing" secondItem="0m2-ia-cnG" secondAttribute="trailing" constant="127" id="xct-Qo-Pzk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fkW-76-nmW"/>
                     </view>
