@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ERb-fR-ZtO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -10,49 +10,52 @@
         <!--New User View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NewUserViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewUserViewController" id="BYZ-38-t0r" customClass="NewUserViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grt-sO-4pi">
-                                <rect key="frame" x="87" y="405" width="240" height="34"/>
+                                <rect key="frame" x="87" y="449" width="240" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horoscope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYZ-IR-Mjt">
-                                <rect key="frame" x="136.5" y="88" width="141.5" height="36"/>
+                                <rect key="frame" x="136.5" y="132" width="141.5" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-Qm-e4F">
-                                <rect key="frame" x="87" y="149" width="240" height="200"/>
+                                <rect key="frame" x="87" y="193" width="240" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ePL-co-Jeh"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PU-ps-C5N">
-                                <rect key="frame" x="172" y="756" width="69" height="30"/>
+                                <rect key="frame" x="172" y="800" width="69" height="30"/>
                                 <state key="normal" title="I'm all set!"/>
                                 <connections>
                                     <action selector="setUserDefaultsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HU7-DB-jy5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-eo-M3l">
-                                <rect key="frame" x="172" y="475" width="70" height="21"/>
+                                <rect key="frame" x="172" y="519" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-tu-EM5">
-                                <rect key="frame" x="182" y="376" width="50" height="21"/>
+                                <rect key="frame" x="182" y="420" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="a4U-8M-ehH">
-                                <rect key="frame" x="0.0" y="504" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="548" width="414" height="216"/>
+                                <connections>
+                                    <action selector="datePickerWasScrolled:" destination="BYZ-38-t0r" eventType="valueChanged" id="1DE-Jl-lFx"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -79,6 +82,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PGf-49-u9B"/>
                     <connections>
                         <outlet property="birthdayDatePicker" destination="a4U-8M-ehH" id="JC9-zd-pqc"/>
                         <outlet property="introImageView" destination="4gW-Qm-e4F" id="Uri-Gt-RAA"/>
@@ -87,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
         <!--User Defalults Detected View Controller-->
         <scene sceneID="qId-CH-TV1">
             <objects>
-                <viewController id="wdT-yG-uAQ" customClass="UserDefalultsDetectedViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDefalultsDetectedViewController" id="wdT-yG-uAQ" customClass="UserDefalultsDetectedViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTZ-Qh-BvW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,12 +161,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfP-iP-aI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943.47826086956525" y="112.5"/>
+            <point key="canvasLocation" x="1853.6231884057972" y="112.5"/>
         </scene>
         <!--Horoscope Results View Controller-->
         <scene sceneID="Tfe-kz-cVY">
             <objects>
-                <viewController id="Fhy-Va-vZi" customClass="HoroscopeResultsViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HoroscopeResultsViewController" id="Fhy-Va-vZi" customClass="HoroscopeResultsViewController" customModule="UserDefaultsLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3d5-Tf-QMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,7 +247,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-j1-hdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.2318840579712" y="112.5"/>
+            <point key="canvasLocation" x="2646.376811594203" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8wM-9F-AaQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ERb-fR-ZtO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hvl-6b-uaq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ppf-cs-AUO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pl6-UF-sgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
 </document>
