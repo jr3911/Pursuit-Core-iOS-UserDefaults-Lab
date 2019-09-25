@@ -14,5 +14,21 @@ class HoroscopeAPIClient {
     static let manager = HoroscopeAPIClient()
     private let urlString = "https://sandipbgt.com/theastrologer/api/horoscope/gemini/today"
     
-    
+    func getHoroscope(astrologicalSign: String, completionHandler: @escaping (Result<Horoscope, AppError>) -> () ) {
+        let urlString = "https://sandipbgt.com/theastrologer/api/horoscope/\(astrologicalSign.lowercased())/today"
+        guard let url = URL(string: urlString) else { return }
+        NetworkHelper.manager.performDataTask(withURL: url, andMethod: .get) { (result) in
+            switch result {
+            case .failure(let error):
+                completionHandler(.failure(error))
+            case .success(let data):
+                do {
+                    let horoscopeInfo = try JSONDecoder().decode(Horoscope.self, from: data)
+                    completionHandler(.success(horoscopeInfo))
+                } catch {
+                    completionHandler(.failure(.couldNotParseJSON(rawError: error)))
+                }
+            }
+        }
+    }
 }

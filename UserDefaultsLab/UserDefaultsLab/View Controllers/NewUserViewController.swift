@@ -62,7 +62,7 @@ class NewUserViewController: UIViewController {
         if let username = nameTextField.text {
             self.username = username
         } else {
-            username = ""
+            username = "you"
         }
     }
     
