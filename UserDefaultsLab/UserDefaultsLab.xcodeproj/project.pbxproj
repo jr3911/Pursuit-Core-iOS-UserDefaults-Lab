@@ -20,6 +20,7 @@
 		08B83B76233AA9F40099E559 /* UserDefalultsDetectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B75233AA9F40099E559 /* UserDefalultsDetectedViewController.swift */; };
 		08B83B78233AAA240099E559 /* HoroscopeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B77233AAA240099E559 /* HoroscopeResultsViewController.swift */; };
 		08B83B7A233AADC30099E559 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B79233AADC30099E559 /* NewUserViewController.swift */; };
+		08B83B7D233AB3010099E559 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B83B7C233AB3010099E559 /* UserDefaultsWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		08B83B75233AA9F40099E559 /* UserDefalultsDetectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefalultsDetectedViewController.swift; sourceTree = "<group>"; };
 		08B83B77233AAA240099E559 /* HoroscopeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResultsViewController.swift; sourceTree = "<group>"; };
 		08B83B79233AADC30099E559 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		08B83B7C233AB3010099E559 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				08B83B72233A95A40099E559 /* Horoscope.swift */,
+				08B83B7C233AB3010099E559 /* UserDefaultsWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				08B83B71233A94FF0099E559 /* HoroscopeAPIClient.swift in Sources */,
 				08B83B6E233A710B0099E559 /* AppError.swift in Sources */,
 				08B83B49233A701D0099E559 /* AppDelegate.swift in Sources */,
+				08B83B7D233AB3010099E559 /* UserDefaultsWrapper.swift in Sources */,
 				08B83B4B233A701D0099E559 /* SceneDelegate.swift in Sources */,
 				08B83B7A233AADC30099E559 /* NewUserViewController.swift in Sources */,
 				08B83B78233AAA240099E559 /* HoroscopeResultsViewController.swift in Sources */,

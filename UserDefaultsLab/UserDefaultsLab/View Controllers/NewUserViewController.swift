@@ -9,6 +9,14 @@
 import UIKit
 
 class NewUserViewController: UIViewController {
+    //MARK: Properties
+    let defaults = UserDefaults.standard
+    
+    var username = "" {
+        didSet {
+            defaults.set(username, forKey: "username")
+        }
+    }
     
     //MARK: - IBOutlets
     @IBOutlet weak var introImageView: UIImageView!
@@ -16,14 +24,13 @@ class NewUserViewController: UIViewController {
     @IBOutlet weak var birthdayDatePicker: UIDatePicker!
     
     //MARK: - IBActions
-    
-    @IBAction func setUserDefaults(_ sender: UIButton) {
-        
+    @IBAction func setUserDefaultsButtonPressed(_ sender: UIButton) {
     }
     
     //MARK: - LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
     }
     
 
@@ -37,4 +44,14 @@ class NewUserViewController: UIViewController {
     }
     */
 
+}
+
+extension NewUserViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            username = text
+        }
+        nameTextField.resignFirstResponder()
+        return true
+    }
 }

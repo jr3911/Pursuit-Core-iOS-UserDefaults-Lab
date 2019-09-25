@@ -36,7 +36,7 @@
                                 <rect key="frame" x="172" y="756" width="69" height="30"/>
                                 <state key="normal" title="I'm all set!"/>
                                 <connections>
-                                    <action selector="setUserDefaults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLn-w1-lVM"/>
+                                    <action selector="setUserDefaultsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HU7-DB-jy5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-eo-M3l">
@@ -83,7 +83,6 @@
                         <outlet property="birthdayDatePicker" destination="a4U-8M-ehH" id="JC9-zd-pqc"/>
                         <outlet property="introImageView" destination="4gW-Qm-e4F" id="Uri-Gt-RAA"/>
                         <outlet property="nameTextField" destination="grt-sO-4pi" id="qZ0-q7-9Yj"/>
-                        <outlet property="setUserDefaults" destination="3PU-ps-C5N" id="PTW-Si-2bj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
