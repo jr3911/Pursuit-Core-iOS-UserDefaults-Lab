@@ -33,8 +33,10 @@ class NewUserViewController: UIViewController {
     @IBAction func setUserDefaultsButtonPressed(_ sender: UIButton) {
         setUsername()
         setBirthday()
+        let sign = AstrologicalSignGetter.getAstrologicalSign(birthday: self.birthday)
         let userDefaultVC = storyboard?.instantiateViewController(withIdentifier: "UserDefalultsDetectedViewController") as! UserDefalultsDetectedViewController
         userDefaultVC.username = self.username
+        userDefaultVC.astrologicalSign = sign
         self.navigationController?.pushViewController(userDefaultVC, animated: true)
     }
     
@@ -54,7 +56,6 @@ class NewUserViewController: UIViewController {
         let month = date[1]
         let day = date[2].replacingOccurrences(of: ",", with: "")
         birthday = [month, day]
-        print(birthday)
     }
     
     private func setUsername() {

@@ -11,6 +11,7 @@ import UIKit
 class UserDefalultsDetectedViewController: UIViewController {
     //MARK: - Properties
     var username: String!
+    var astrologicalSign: String!
     
     //MARK: IBOutlets
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -30,6 +31,7 @@ class UserDefalultsDetectedViewController: UIViewController {
     //MARK: Custom Functions
     private func setUpDetailWelcomeViews() {
         welcomeLabel.text = "Welcome, \(username.description)!"
+        userSignLabel.text = astrologicalSign.uppercased()
     }
 
 }
