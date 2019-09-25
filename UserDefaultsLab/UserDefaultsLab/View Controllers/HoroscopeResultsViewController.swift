@@ -9,6 +9,8 @@
 import UIKit
 
 class HoroscopeResultsViewController: UIViewController {
+    //MARK: - Properties
+    var astrologicalSign: String!
     
     //MARK: - IBOutlets
     @IBOutlet weak var detailUserLabel: UILabel!

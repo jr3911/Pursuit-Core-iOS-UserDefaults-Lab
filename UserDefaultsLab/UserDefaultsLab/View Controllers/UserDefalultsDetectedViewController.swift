@@ -19,7 +19,12 @@ class UserDefalultsDetectedViewController: UIViewController {
 
     //MARK: - IBActions
     @IBAction func revealButtonPressed(_ sender: UIButton) {
-        
+        if let astrologicalSign = self.astrologicalSign {
+            prepareNextViewController(astrologicalSign: astrologicalSign)
+        } else {
+            print("cant do that")
+            return
+        }
     }
     
     //MARK: - LifeCycle Methods
@@ -32,6 +37,12 @@ class UserDefalultsDetectedViewController: UIViewController {
     private func setUpDetailWelcomeViews() {
         welcomeLabel.text = "Welcome, \(username.description)!"
         userSignLabel.text = astrologicalSign.uppercased()
+    }
+    
+    private func prepareNextViewController(astrologicalSign: String) {
+        let horoscopeResultsVC = storyboard?.instantiateViewController(withIdentifier: "HoroscopeResultsViewController") as! HoroscopeResultsViewController
+        horoscopeResultsVC.astrologicalSign = astrologicalSign
+        self.navigationController?.pushViewController(horoscopeResultsVC, animated: true)
     }
 
 }
