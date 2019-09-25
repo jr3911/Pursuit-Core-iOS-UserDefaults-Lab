@@ -31,17 +31,15 @@ class NewUserViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func setUserDefaultsButtonPressed(_ sender: UIButton) {
+        setUsername()
+        setBirthday()
         let userDefaultVC = storyboard?.instantiateViewController(withIdentifier: "UserDefalultsDetectedViewController") as! UserDefalultsDetectedViewController
         userDefaultVC.username = self.username
         self.navigationController?.pushViewController(userDefaultVC, animated: true)
-        
     }
     
     @IBAction func datePickerWasScrolled(_ sender: UIDatePicker) {
-        let date = sender.date.description(with: .current).components(separatedBy: " ")
-        let month = date[1]
-        let day = date[2].replacingOccurrences(of: ",", with: "")
-        birthday = [month, day]
+        setBirthday()
     }
     
     //MARK: - LifeCycle Methods
@@ -50,13 +48,28 @@ class NewUserViewController: UIViewController {
         nameTextField.delegate = self
     }
     
+    //MARK: - Custom Functions
+    private func setBirthday() {
+        let date = birthdayDatePicker.date.description(with: .current).components(separatedBy: " ")
+        let month = date[1]
+        let day = date[2].replacingOccurrences(of: ",", with: "")
+        birthday = [month, day]
+        print(birthday)
+    }
+    
+    private func setUsername() {
+        if let username = nameTextField.text {
+            self.username = username
+        } else {
+            username = ""
+        }
+    }
+    
 }
 
 extension NewUserViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text {
-            username = text
-        }
+        setUsername()
         nameTextField.resignFirstResponder()
         return true
     }
