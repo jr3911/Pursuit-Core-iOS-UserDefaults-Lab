@@ -31,7 +31,6 @@ class NewUserViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func setUserDefaultsButtonPressed(_ sender: UIButton) {
-        setUsername()
         setBirthday()
         let sign = AstrologicalSignGetter.getAstrologicalSign(birthday: self.birthday)
         let userDefaultVC = storyboard?.instantiateViewController(withIdentifier: "UserDefalultsDetectedViewController") as! UserDefalultsDetectedViewController
@@ -40,14 +39,11 @@ class NewUserViewController: UIViewController {
         self.navigationController?.pushViewController(userDefaultVC, animated: true)
     }
     
-    @IBAction func datePickerWasScrolled(_ sender: UIDatePicker) {
-        setBirthday()
-    }
-    
     //MARK: - LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
+        loadNewUserImage()
     }
     
     //MARK: - Custom Functions
@@ -58,19 +54,14 @@ class NewUserViewController: UIViewController {
         birthday = [month, day]
     }
     
-    private func setUsername() {
-        if let username = nameTextField.text {
-            self.username = username
-        } else {
-            username = "you"
-        }
+    private func loadNewUserImage() {
+        introImageView.image = UIImage(named: "astrologyBSWheel")
     }
     
 }
 
 extension NewUserViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        setUsername()
         nameTextField.resignFirstResponder()
         return true
     }
