@@ -24,6 +24,12 @@ class NewUserViewController: UIViewController {
         }
     }
     
+    var birthdayDate: Date = Date() {
+        didSet {
+            defaults.set(birthdayDate, forKey: "birthdayDate")
+        }
+    }
+    
     //MARK: - IBOutlets
     @IBOutlet weak var introImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -43,11 +49,13 @@ class NewUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
+        setInitialValuesFromUserDefaults()
         loadNewUserImage()
     }
     
     //MARK: - Custom Functions
     private func setBirthday() {
+        birthdayDate = birthdayDatePicker.date
         let date = birthdayDatePicker.date.description(with: .current).components(separatedBy: " ")
         let month = date[1]
         let day = date[2].replacingOccurrences(of: ",", with: "")
@@ -56,6 +64,19 @@ class NewUserViewController: UIViewController {
     
     private func loadNewUserImage() {
         introImageView.image = UIImage(named: "astrologyBSWheel")
+    }
+    
+    private func setInitialValuesFromUserDefaults() {
+        if let storedUsername = defaults.value(forKey: "username") as? String {
+            username = storedUsername
+            nameTextField.text = storedUsername
+        }
+        if let storedBirthday = defaults.value(forKey: "birthday") as? [String] {
+            birthday = storedBirthday
+        }
+        if let storedBirthdayDate = defaults.value(forKey: "birthdayDate") as? Date {
+            birthdayDatePicker.date = storedBirthdayDate
+        }
     }
     
 }
