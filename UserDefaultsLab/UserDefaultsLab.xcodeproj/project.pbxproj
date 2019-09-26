@@ -100,9 +100,9 @@
 				08B83B74233A95AC0099E559 /* Models */,
 				08B83B51233A701E0099E559 /* Assets.xcassets */,
 				08B83B6A233A70550099E559 /* Supporting Files */,
-				08B83B56233A701E0099E559 /* Info.plist */,
 				08B83B6F233A741D0099E559 /* Network Files */,
 				08B83B7E233C0FC60099E559 /* AstrologicalSignGetter.swift */,
+				08B83B56233A701E0099E559 /* Info.plist */,
 			);
 			path = UserDefaultsLab;
 			sourceTree = "<group>";

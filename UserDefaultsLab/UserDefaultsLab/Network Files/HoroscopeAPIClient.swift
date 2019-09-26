@@ -12,10 +12,9 @@ class HoroscopeAPIClient {
     //MARK: - Private Properties and Initializers
     private init() {}
     static let manager = HoroscopeAPIClient()
-    private let urlString = "https://sandipbgt.com/theastrologer/api/horoscope/gemini/today"
     
     func getHoroscope(astrologicalSign: String, completionHandler: @escaping (Result<Horoscope, AppError>) -> () ) {
-        let urlString = "https://sandipbgt.com/theastrologer/api/horoscope/\(astrologicalSign.lowercased())/today"
+        let urlString = "http://sandipbgt.com/theastrologer/api/horoscope/\(astrologicalSign.lowercased())/today"
         guard let url = URL(string: urlString) else { return }
         NetworkHelper.manager.performDataTask(withURL: url, andMethod: .get) { (result) in
             switch result {
