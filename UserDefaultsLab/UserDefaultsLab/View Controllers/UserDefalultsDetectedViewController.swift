@@ -19,8 +19,8 @@ class UserDefalultsDetectedViewController: UIViewController {
 
     //MARK: - IBActions
     @IBAction func revealButtonPressed(_ sender: UIButton) {
-        if let astrologicalSign = self.astrologicalSign {
-            prepareNextViewController(astrologicalSign: astrologicalSign)
+        if let astrologicalSign = self.astrologicalSign, let username = self.username {
+            prepareNextViewController(username: username, astrologicalSign: astrologicalSign)
         } else {
             print("cant do that")
             return
@@ -39,8 +39,9 @@ class UserDefalultsDetectedViewController: UIViewController {
         userSignLabel.text = astrologicalSign.uppercased()
     }
     
-    private func prepareNextViewController(astrologicalSign: String) {
+    private func prepareNextViewController(username: String, astrologicalSign: String) {
         let horoscopeResultsVC = storyboard?.instantiateViewController(withIdentifier: "HoroscopeResultsViewController") as! HoroscopeResultsViewController
+        horoscopeResultsVC.username = username
         horoscopeResultsVC.astrologicalSign = astrologicalSign
         self.navigationController?.pushViewController(horoscopeResultsVC, animated: true)
     }
